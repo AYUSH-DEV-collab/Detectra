@@ -33,10 +33,39 @@ export default function Features() {
         <div className="bento-card span-2">
           <h3>REAL-TIME API</h3>
           <p>Inject forensic security directly into your stack. Ultra-low latency verification.</p>
+        
+          <div className="terminal-block">
+            <span className="yellow-code">GET /v4/neural/analyze</span><br/>
+            <span>X-DETECTRA-TOKEN: [. . .]</span><br/>
+            <span className="green-code">STATUS: 200 OK</span>
+          </div>
+        
         </div>
-        <div className="bento-card span-3">
-          <h3>BATCH ANALYSIS</h3>
-          <p>Process petabytes of visual data in minutes for high-throughput content vetting.</p>
+        
+        <div className="bento-card span-3 batch-card">
+          
+          <div className="card-content">
+            <h3>BATCH ANALYSIS</h3>
+            <p>Process petabytes of visual data in minutes for high-throughput content vetting.</p>
+            <p className="explore-link">EXPLORE SCALABILITY <span className="yellow-arrow">&#10132;</span></p>
+          </div>
+          
+          <div className="status-grid">
+            <div className="grid-box"></div>
+            <div className="grid-box green-box"><span className="dot-check">✓</span></div>
+            <div className="grid-box"></div>
+            <div className="grid-box"></div>
+            
+            <div className="grid-box"></div>
+            <div className="grid-box"></div>
+            <div className="grid-box red-box"><span className="triangle">⚠</span>{/* <span className="exclamtn">!</span> */}</div>
+            <div className="grid-box"></div>
+
+            <div className="grid-box"></div>
+            <div className="grid-box"></div>
+            <div className="grid-box"></div>
+            <div className="grid-box"></div>
+          </div>
         </div>
       </div>
 

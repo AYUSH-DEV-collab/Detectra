@@ -361,7 +361,7 @@ body {
     align-items: flex-start;
     gap: 20px;
   }
-  
+
   .bento-grid {
     grid-template-columns: 1fr;
   }
@@ -373,6 +373,7 @@ body {
   .features-footer {
     grid-template-columns: 1fr;
   }
+
 }
 
 .radar-ring {
@@ -439,6 +440,12 @@ body {
 
 .features-section {
   padding: 100px 10%;
+  background-color: #050505;
+  background-image: 
+  linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+
+  background-size: 60px 60px;
 }
 
 .big-title {
@@ -484,7 +491,7 @@ body {
 }
 
 .bento-card p {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 18px;
   color: rgb(193, 193, 193);
   line-height: 1.5;
@@ -502,6 +509,7 @@ body {
 
 .span-2 {
   grid-column: span 2;
+  background-color: #1c1c1c;
 }
 
 .features-footer {
@@ -523,3 +531,90 @@ body {
   line-height: 1.5;
 }
 
+.terminal-block {
+  display: grid;
+  padding: 15px ;
+  border: 1px solid #000000;
+  background-color: #000000;
+  line-height: 8px;
+  font-size: 11px;
+  box-shadow: 0 0 10px rgba(223,255,0,0.05);
+  font-family: 'Courier New', Courier, monospace ;
+  margin-top: 20px;
+  border-radius: 2px;
+}
+
+.yellow-code {
+  color: #CCFF00;
+}
+
+.green-code {
+  color: #39FF14;
+}
+
+.batch-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 250px;
+  gap: 4px;
+}
+
+.grid-box {
+  background-color: rgba(140, 140, 140, 0.09);
+  aspect-ratio: 1/1;
+  /* border: 2px solid rgba(0, 0, 0, 0.9); */
+}
+
+.green-box {
+  border: 1px solid #39FF14;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(73, 255, 41, 0.2);
+}
+
+.dot-check {
+  height: 15px;
+  width: 15px;
+  background-color: #39FF14;
+  border-radius: 50%;
+  display: flex;          
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);        
+  font-size: 8px;       
+  font-weight: bold;
+}
+
+.red-box {
+  border: 1px solid red;
+  background-color: rgb(255, 18, 18, 0.2) ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.triangle {
+  color: red;
+  font-size: 20px;
+}
+
+p.explore-link {  
+  color: #CCFF00;
+  cursor: pointer;
+}
+
+p.explore-link:hover {
+  text-shadow: 0 0 2px #CCFF00;
+}
+
+p.explore-link:active {
+  background-color: rgba(119, 254, 95, 0.8);
+  color: #39FF14;
+  height: 0;
+  text-shadow: 0 0 25px rgba(54, 250, 19, 1);
+}
