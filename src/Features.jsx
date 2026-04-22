@@ -1,3 +1,6 @@
+import BorderGlow from "./reactbits/BorderGlow";
+
+
 export default function Features() {
   return (
     <section className="features-section">
@@ -19,46 +22,75 @@ export default function Features() {
 
 
       <div className="bento-grid">
-
-        <div className="bento-card span-3">
+        <BorderGlow
+          className="span-3 bento-card"
+          glowColor="120 10 54"
+          borderRadius={5}
+          colors={["#FFFF33", "#39FF14"]}
+          backgroundColor="rgba(0, 0, 0, 0.97)"
+        >
           <h3>DEEPFAKE DETECTION</h3>
           <p>Identify high-fidelity synthetic media using temporal coherence analysis</p>
-        </div>
+        </BorderGlow>
 
-        <div className="bento-card span-2">
+        <BorderGlow
+          className="span-2 bento-card"
+          glowColor="120 10 54"
+          borderRadius={5}
+          colors={["#FFFF33", "#39FF14"]}
+          backgroundColor="rgba(24, 24, 24, 1)"
+        >
           <h3>NEURAL ARTIFACT MAPPING</h3>
-          <p>very generative model leaves a digital fingerprint. We map GAN-specific textures</p>
-        </div>
+          <p>Every generative model leaves a digital fingerprint. We map GAN-specific textures</p>
+        </BorderGlow>
 
-        <div className="bento-card span-2">
+        <BorderGlow
+          className="span-2 bento-card"
+          glowColor="120 10 54"
+          borderRadius={5}
+          colors={["#FFFF33", "#39FF14"]}
+          backgroundColor="rgba(24, 24, 24, 1)"
+        >
           <h3>REAL-TIME API</h3>
           <p>Inject forensic security directly into your stack. Ultra-low latency verification.</p>
-        
+
           <div className="terminal-block">
-            <span className="yellow-code">GET /v4/neural/analyze</span><br/>
-            <span>X-DETECTRA-TOKEN: [. . .]</span><br/>
+            <span className="yellow-code">GET /v4/neural/analyze</span>
+            <br />
+            <span>X-DETECTRA-TOKEN: [. . .]</span>
+            <br />
             <span className="green-code">STATUS: 200 OK</span>
           </div>
-        
-        </div>
-        
-        <div className="bento-card span-3 batch-card">
-          
+        </BorderGlow>
+
+        <BorderGlow
+          className="span-3 bento-card batch-card"
+          glowColor="120 10 54"
+          borderRadius={5}
+          colors={["#FFFF33", "#39FF14"]}
+          backgroundColor="rgba(0, 0, 0, 0.97)"
+        >
           <div className="card-content">
             <h3>BATCH ANALYSIS</h3>
             <p>Process petabytes of visual data in minutes for high-throughput content vetting.</p>
-            <p className="explore-link">EXPLORE SCALABILITY <span className="yellow-arrow">&#10132;</span></p>
+            <p className="explore-link">
+              EXPLORE SCALABILITY <span className="yellow-arrow">&#10132;</span>
+            </p>
           </div>
-          
+
           <div className="status-grid">
             <div className="grid-box"></div>
-            <div className="grid-box green-box"><span className="dot-check">✓</span></div>
+            <div className="grid-box green-box">
+              <span className="dot-check">✓</span>
+            </div>
             <div className="grid-box"></div>
             <div className="grid-box"></div>
-            
+
             <div className="grid-box"></div>
             <div className="grid-box"></div>
-            <div className="grid-box red-box"><span className="triangle">⚠</span>{/* <span className="exclamtn">!</span> */}</div>
+            <div className="grid-box red-box">
+              <span className="triangle">⚠</span>
+            </div>
             <div className="grid-box"></div>
 
             <div className="grid-box"></div>
@@ -66,7 +98,7 @@ export default function Features() {
             <div className="grid-box"></div>
             <div className="grid-box"></div>
           </div>
-        </div>
+        </BorderGlow>
       </div>
 
       <div className="features-footer">

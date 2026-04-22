@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
@@ -508,7 +510,7 @@ body {
 }
 
 .span-2 {
-  grid-column: span 2;
+  grid-column:span 2;
   background-color: #1c1c1c;
 }
 
@@ -552,15 +554,17 @@ body {
   color: #39FF14;
 }
 
-.batch-card {
-  display: flex;
+.batch-card > div:last-child {
+  flex-direction: row !important;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
 .status-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  width: 250px;
+  width: 480px;
   gap: 4px;
 }
 
