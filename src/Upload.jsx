@@ -2,16 +2,15 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Upload() {
-  // VIVA NOTE: useState is used to store data that changes over time and triggers a UI update.
   const [isProcessing, setIsProcessing] = useState(false);
   const [progress, setProgress] = useState(0);
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
   
-  // NEW: Added state to hold the final mock result after scanning
+  
   const [analysisResult, setAnalysisResult] = useState(null);
 
-  // VIVA NOTE: useRef holds a reference to the hidden HTML input element so we can trigger clicks on it programmatically.
+  
   const inputRef = useRef(null);
 
   const handleFile = (selectedFile) => {
@@ -19,9 +18,9 @@ export default function Upload() {
       setFile(selectedFile);
       setIsProcessing(true);
       setProgress(0);
-      setAnalysisResult(null); // Clear previous results
+      setAnalysisResult(null); 
 
-      // VIVA NOTE: setInterval creates our fake progress bar by incrementing the state every 50ms.
+      
       const interval = setInterval(() => {
         setProgress((prev) => {
           if (prev >= 100) {
@@ -32,17 +31,17 @@ export default function Upload() {
         });
       }, 50);
 
-      // VIVA NOTE: setTimeout simulates a network request delay. After 2.5 seconds, we show the mock results.
+      
       setTimeout(() => {
         setIsProcessing(false);
-        // Generate a random mock result to make the presentation dynamic
+        
         const mockResults = [
           { status: 'HIGH RISK', score: '98.4%', color: '#ff3333', desc: 'Synthetic Neural Artifacts Detected in Visual Layer.' },
           { status: 'AUTHENTIC', score: '0.2%', color: '#39FF14', desc: 'Biological Sync Verified. Source is clean.' },
           { status: 'ANOMALY', score: '64.1%', color: '#ffbb00', desc: 'Semantic Drift Detected in Audio Frequencies.' }
         ];
         setAnalysisResult(mockResults[Math.floor(Math.random() * mockResults.length)]);
-      }, 2500); // Shortened to 2.5s for a snappier presentation demo
+      }, 2500); 
     }
   };
 
@@ -51,7 +50,7 @@ export default function Upload() {
   };
 
   const handleDragOver = (e) => {
-    e.preventDefault(); // VIVA NOTE: Prevents the browser from opening the file in a new tab.
+    e.preventDefault(); 
     setIsDragging(true);
   };
 
@@ -86,7 +85,7 @@ export default function Upload() {
         </div>
       </div>
 
-      {/* Hidden file input triggered by clicking the dropzone */}
+      
       <input type='file' ref={inputRef} onChange={handleInputChange} hidden/>
 
       <button className='back-btn'><Link to='/'>&#x3c; BACK TO TERMINAL </Link></button>
@@ -109,7 +108,7 @@ export default function Upload() {
           onDrop={handleDrop}
           style={{ cursor: (isProcessing || analysisResult) ? 'default' : 'pointer' }}
         >
-          {/* Conditional Rendering: Showing different UI based on state */}
+          
           {isProcessing ? (
             <div className='processing-content' style={{ padding: '2rem', textAlign: 'center', width: '80%' }}>
               <h2 style={{ color: '#39FF14', marginBottom: '1rem', fontFamily: 'monospace', letterSpacing: '2px' }}>ANALYZING NEURAL GRID...</h2>
